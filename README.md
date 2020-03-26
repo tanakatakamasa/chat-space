@@ -52,7 +52,7 @@ has_many: groups_users
 groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null:false, unique:true|
+|name|string|null:false, unique:true|
 
 Association
 has_many: messages
