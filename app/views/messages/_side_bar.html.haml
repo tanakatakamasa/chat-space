@@ -4,10 +4,15 @@
       .user-name masa
       .menu
         .new-group
-        =link_to "https://www.facebook.com/", class: "new-grop"
-        
-        
+          = link_to "#", class: "ico" do
+            = icon('far', 'edit')
+
         .edit-user
-        = icon('fab', 'twitter')
-    
+          = link_to "#", class: "ico" do
+            = icon('fas', 'cog')
   .groups
+    .side_grops
+      .user_text 
+        techcamp
+      .user_grops 
+        まだメッセージがありません

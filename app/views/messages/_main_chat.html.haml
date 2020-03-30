@@ -1,4 +1,27 @@
 .chat-main
   .main-header
+    .header-leftbox
+      .current-group test
+      %ul.currnet-member 
+        Member：
+        %li.member-list-member masa
+
+    .currnet-edit 
+      = link_to "#", class: "btn" do
+        Edit
+
   .messages
+    %ul.messages-user 
+      masa：
+      %li.youbi 2020/3/30
+    .messages-text おはよう！
   .form
+    %form.new_message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder:"type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type:"submit", class:"submit-btn", value: "Send"}
+
+    
