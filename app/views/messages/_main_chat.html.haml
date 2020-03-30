@@ -1,19 +1,21 @@
 .chat-main
-  .main-header
-    .header-leftbox
-      .current-group test
-      %ul.currnet-member 
-        Member：
-        %li.member-list-member masa
-
-    .currnet-edit 
-      = link_to "#", class: "btn" do
-        Edit
+  .chat-main__header
+    .chat-main__header__leftbox
+      .chat-main__header__leftbox__current 
+        test
+        %ul.chat-main__header__leftbox__current__member 
+          Member：
+          %li.chat-main__header__leftbox__current__member__1 
+            masa
+      .chat-main__header__edit
+        = link_to "#", class: "chat-main__header__edit__btn" do
+          Edit
 
   .messages
-    %ul.messages-user 
+    %ul.messages__user 
       masa：
-      %li.youbi 2020/3/30
+      %li.ymessages__user__oubi 
+        2020/3/30
     .messages-text おはよう！
   .form
     %form.new_message
