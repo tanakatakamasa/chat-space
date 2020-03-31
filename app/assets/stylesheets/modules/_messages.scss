@@ -130,7 +130,7 @@
         }
         .edit-user {
         }
-        .ico {
+        .icon {
           color: #ffffff;
         }
       }
@@ -140,17 +140,19 @@
       background-color: #2f3e51;
       font-weight: bold;
       &__side {
-        color: #ffffff;
+        text-decoration: none;
         margin: 0 20px 0 20px;
       }
       .user_text  {
         padding: 20px 0 5px 0;
         font-weight: 16px;
         font-size: 15px;
+        color: #ffffff;
       }
       .user_grops {
         padding-bottom: 40px;
         font-size: 11px;
+        color: #ffffff;
       }
     }
   }
