@@ -2,28 +2,27 @@
   .chat-main__header
     .chat-main__header__leftbox
       .chat-main__header__leftbox__current 
-        test
-        %ul.chat-main__header__leftbox__current__member 
-          Member：
-          %li.chat-main__header__leftbox__current__member__1 
-            masa
-      .chat-main__header__edit
-        = link_to "#", class: "chat-main__header__edit__btn" do
-          Edit
+        = @group.name
+      %ul.chat-main__header__leftbox__current__members 
+        Member： 
+        %li.chat-main__header__leftbox__current__members__members
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
+    .chat-main__header__edit
+      = link_to "edit", class: "chat-main__header__edit__btn" do
+        Edit
+        
 
   .messages
-    %ul.messages__user 
-      masa：
-      %li.ymessages__user__oubi 
-        2020/3/30
-    .messages-text おはよう！
-  .form
-    %form.new_message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder:"type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type:"submit", class:"submit-btn", value: "Send"}
-
+    = render partial: 'messages', collection: @messages
     
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: "form__mask__image" do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: "hidden"
+      = f.submit 'Send', class:"form__submit"
+
+      
