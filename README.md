@@ -1,6 +1,7 @@
 chat-space
 
 
+
 messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
